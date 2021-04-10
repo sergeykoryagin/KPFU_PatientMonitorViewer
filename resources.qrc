@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/admit-info-button.svg</file>
+        <file>images/alarm-button.svg</file>
+        <file>images/button-2.svg</file>
+        <file>images/button-2-active.svg</file>
+        <file>images/button-4.svg</file>
+        <file>images/button-4-active.svg</file>
+        <file>images/button-8.svg</file>
+        <file>images/button-8-active.svg</file>
+        <file>images/button-16.svg</file>
+        <file>images/button-16-active.svg</file>
+        <file>images/button-32.svg</file>
+        <file>images/button-32-active.svg</file>
+        <file>images/button-next.svg</file>
+        <file>images/button-prev.svg</file>
+        <file>images/display-waveform.png</file>
+        <file>images/logo.svg</file>
+        <file>images/main-menu.svg</file>
+        <file>images/patient-manager.svg</file>
+        <file>images/patient-monitor-icon.svg</file>
+        <file>images/settings.svg</file>
+        <file>images/setup-client-env.svg</file>
+        <file>images/stop-record-button.svg</file>
+    </qresource>
+</RCC>
