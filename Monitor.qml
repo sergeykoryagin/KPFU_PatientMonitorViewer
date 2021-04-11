@@ -12,7 +12,24 @@ Item{
     property alias monitorWidth: monitor.width
     property alias monitorHeight: monitor.height
 
+
+    property alias ecg: ecgValue.text
+    property alias pvc: pvcValue.text
+    property alias pr: prValue.text
+    property alias spo2: spo2Value.text
+    property alias t1: t1Value.text
+    property alias t2: t2Value.text
+    property alias ibp1: ibp1Value.text
+    property alias ibp2: ibp2Value.text
+    property alias etco2: etco2Value.text
+    property alias fico2: fico2Value.text
+    property alias awpr: awprValue.text
+    property alias nibp: nibpValue.text
+
     property int fontSize: 12
+
+
+
 
     Rectangle {
         id: monitor
@@ -102,9 +119,7 @@ Item{
                         }
 
                         Text {
-                            id: text1ecgValue
-                            x: 212
-                            y: 103
+                            id: ecgValue
                             color: "#07f702"
                             text: qsTr("79")
                             anchors.right: parent.right
@@ -137,8 +152,6 @@ Item{
                         border.color: "#015793"
                         Text {
                             id: pr
-                            x: 29
-                            y: 17
                             color: "#07f702"
                             text: qsTr("PR")
                             anchors.left: parent.left
@@ -150,7 +163,6 @@ Item{
 
                         Text {
                             id: prRange
-                            y: 7
                             color: "#0a7908"
                             text: qsTr("50/150")
                             anchors.left: parent.left
@@ -162,22 +174,18 @@ Item{
 
                         Text {
                             id: prValue
-                            x: 21
-                            y: 15
                             color: "#07f702"
                             text: qsTr("80")
                             anchors.right: parent.right
                             anchors.top: parent.top
                             anchors.rightMargin: 8
                             font.weight: Font.Bold
-                            font.pointSize: fontSize * 5
+                            font.pointSize: fontSize * 4
                             anchors.topMargin: 33
                         }
 
                         Text {
                             id: spo2
-                            x: 37
-                            y: 10
                             color: "#05e6fd"
                             text: qsTr("SpO2 %")
                             anchors.left: parent.left
@@ -200,8 +208,6 @@ Item{
 
                         Text {
                             id: spo2Value
-                            x: 40
-                            y: 8
                             color: "#05e6fd"
                             text: qsTr("98")
                             anchors.right: parent.right
@@ -225,8 +231,6 @@ Item{
 
                         Text {
                             id: t1
-                            x: 21
-                            y: 8
                             visible: true
                             color: "#07f702"
                             text: qsTr("T1")
@@ -239,8 +243,6 @@ Item{
 
                         Text {
                             id: t2
-                            x: 22
-                            y: 3
                             color: "#07f702"
                             text: qsTr("T2")
                             anchors.left: parent.left
@@ -260,12 +262,10 @@ Item{
                             anchors.leftMargin: 8
                             anchors.topMargin: 27
                             font.pointSize: fontSize * 3/4
-                            Layout.fillHeight: true
                         }
 
                         Text {
                             id: t1Value
-                            x: 139
                             color: "#07f702"
                             text: qsTr("36.5°C")
                             anchors.right: parent.right
@@ -274,12 +274,10 @@ Item{
                             anchors.topMargin: 8
                             font.weight: Font.Bold
                             font.pointSize: fontSize * 5/3
-                            Layout.fillHeight: true
                         }
 
                         Text {
                             id: t2Range
-                            y: 92
                             color: "#0a7908"
                             text: qsTr("30.0/42.0")
                             anchors.left: parent.left
@@ -287,13 +285,10 @@ Item{
                             anchors.bottomMargin: 14
                             anchors.leftMargin: 8
                             font.pointSize: fontSize * 3/4
-                            Layout.fillHeight: true
                         }
 
                         Text {
-                            id: t2Value1
-                            x: 139
-                            y: 79
+                            id: t2Value
                             color: "#07f702"
                             text: qsTr("37.5°C")
                             anchors.right: parent.right
@@ -302,7 +297,6 @@ Item{
                             anchors.bottomMargin: 8
                             font.pointSize: fontSize * 5/3
                             font.weight: Font.Bold
-                            Layout.fillHeight: true
                         }
 
                     }
@@ -330,7 +324,6 @@ Item{
 
                         Text {
                             id: ibp1Range
-                            x: 196
                             color: "#950000"
                             text: qsTr("80/200")
                             anchors.right: parent.right
@@ -343,7 +336,6 @@ Item{
 
                         Text {
                             id: ibp1Value
-                            x: 112
                             color: "#ff0000"
                             text: qsTr("120/80")
                             anchors.right: parent.right
@@ -356,8 +348,6 @@ Item{
 
                         Text {
                             id: t93
-                            x: 210
-                            y: 99
                             color: "#ff0000"
                             text: qsTr("(93)")
                             anchors.right: parent.right
@@ -390,7 +380,6 @@ Item{
 
                         Text {
                             id: nibpRange
-                            x: 314
                             color: "#950000"
                             text: qsTr("80/200")
                             anchors.right: parent.right
@@ -402,19 +391,18 @@ Item{
 
                         Text {
                             id: neo
-                            y: 43
+                            y: 50
                             color: "#000000"
                             text: qsTr("NEO")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             anchors.leftMargin: 8
-                            anchors.bottomMargin: 48
-                            font.pointSize: fontSize * 3/4
+                            anchors.bottomMargin: 51
+                            font.pointSize: fontSize
                         }
 
                         Text {
                             id: nibpValue
-                            x: 264
                             color: "#fd0303"
                             text: qsTr("---/---")
                             anchors.right: parent.right
@@ -426,8 +414,6 @@ Item{
 
                         Text {
                             id: t___
-                            x: 318
-                            y: 93
                             color: "#fd0303"
                             text: qsTr("(---)")
                             anchors.right: parent.right
@@ -439,19 +425,17 @@ Item{
 
                         Text {
                             id: neoTime
-                            y: 62
                             color: "#000000"
                             text: qsTr("00:00")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             anchors.leftMargin: 8
                             anchors.bottomMargin: 36
-                            font.pointSize: fontSize * 2/3
+                            font.pointSize: fontSize
                         }
 
                         Image {
                             id: repeat1
-                            y: 80
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             source: "images/repeat 1.svg"
@@ -462,19 +446,17 @@ Item{
                         }
 
                         Text {
-                            id: text1
-                            y: 81
+                            id: off
                             text: qsTr("OFF")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             anchors.bottomMargin: 22
                             anchors.leftMargin: 26
-                            font.pointSize: fontSize * 2/3
+                            font.pointSize: fontSize
                         }
 
                         Image {
                             id: clock1
-                            y: 100
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             source: "images/clock 1.svg"
@@ -485,14 +467,13 @@ Item{
 
                         Text {
                             id: neo2
-                            y: 99
                             color: "#000000"
                             text: qsTr("00:00")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             anchors.bottomMargin: 8
                             anchors.leftMargin: 26
-                            font.pointSize: fontSize * 2/3
+                            font.pointSize: fontSize
                         }
 
 
@@ -521,7 +502,6 @@ Item{
 
                         Text {
                             id: fico2
-                            y: 64
                             color: "#07f702"
                             text: qsTr("FiCO2")
                             anchors.left: parent.left
@@ -533,7 +513,6 @@ Item{
 
                         Text {
                             id: etco2Value
-                            x: 308
                             color: "#b900d8"
                             text: qsTr("32")
                             anchors.right: parent.right
@@ -546,8 +525,6 @@ Item{
 
                         Text {
                             id: awprValue
-                            x: 308
-                            y: 73
                             color: "#000000"
                             text: qsTr("32")
                             anchors.right: parent.right
@@ -560,7 +537,6 @@ Item{
 
                         Text {
                             id: fico2Value
-                            y: 73
                             color: "#07f702"
                             text: qsTr("32")
                             anchors.left: parent.left
@@ -573,8 +549,6 @@ Item{
 
                         Text {
                             id: awpr
-                            x: 247
-                            y: 64
                             color: "#000000"
                             text: qsTr("AWPR")
                             anchors.right: parent.right
@@ -607,19 +581,17 @@ Item{
 
                         Text {
                             id: ibp2Range
-                            x: 196
                             color: "#950000"
                             text: qsTr("80/200")
                             anchors.right: parent.right
                             anchors.top: parent.top
                             anchors.topMargin: 8
                             anchors.rightMargin: 8
-                            font.pointSize: fontSize * 2/3
+                            font.pointSize: fontSize
                         }
 
                         Text {
                             id: ibp2Value
-                            x: 112
                             color: "#ff0000"
                             text: qsTr("120/80")
                             anchors.right: parent.right
@@ -632,15 +604,13 @@ Item{
 
                         Text {
                             id: t9_2
-                            x: 210
-                            y: 99
                             color: "#ff0000"
                             text: qsTr("(93)")
                             anchors.right: parent.right
                             anchors.bottom: parent.bottom
                             anchors.bottomMargin: 8
                             anchors.rightMargin: 8
-                            font.pointSize: fontSize * 2/3
+                            font.pointSize: fontSize
                         }
                     }
                 }
@@ -650,6 +620,6 @@ Item{
 }
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:1.33}D{i:18}
+    D{i:0;formeditorZoom:1.75}D{i:18}
 }
 ##^##*/

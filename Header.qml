@@ -93,9 +93,6 @@ Rectangle {
                     source: "images/button-32.svg"
                     fillMode: Image.PreserveAspectFit
                 }
-                Component.onCompleted: {
-                    console.log(width)
-                }
             }
 
             DropShadow {

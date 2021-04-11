@@ -10,7 +10,7 @@ Window {
     visible: true
     title: qsTr("Hello World")
 
-    property int monitorFontSize: height / 70
+    property int monitorFontSize: Math.min(height / 70, width / 110)
     Header {
         id: header
         anchors.left: parent.left
@@ -47,6 +47,19 @@ Window {
 
                 fontSize: monitorFontSize
 
+
+                ecg: Params1.ecgV
+                pr: Params1.prV
+                spo2: Params1.spo2V
+                t1: Params1.t1V + "°C"
+                t2: Params1.t2V + "°C"
+                ibp1: Params1.ibp1V
+                ibp2: Params1.ibp2V
+                etco2: Params1.etco2V
+                fico2: Params1.fico2V
+                awpr: Params1.awprV
+                nibp: Params1.nibpV
+
             }
 
 
@@ -55,6 +68,19 @@ Window {
 
                 monitorHeight: monitors.height / 2
                 monitorWidth:  monitors.width
+
+                ecg: Params2.ecgV
+                pr: Params2.prV
+                spo2: Params2.spo2V
+                t1: Params2.t1V + "°C"
+                t2: Params2.t2V + "°C"
+                ibp1: Params2.ibp1V
+                ibp2: Params2.ibp2V
+                etco2: Params2.etco2V
+                fico2: Params2.fico2V
+                awpr: Params2.awprV
+                nibp: Params2.nibpV
+
 
                 fontSize: monitorFontSize
             }
@@ -71,6 +97,6 @@ Window {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.2}
+    D{i:0;formeditorZoom:0.5}
 }
 ##^##*/
