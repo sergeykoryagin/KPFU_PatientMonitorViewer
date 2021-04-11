@@ -8,14 +8,10 @@ Rectangle {
     width: 1900
     height: 100
     color: "#015793"
-
-
     property alias headerSpacing: rowHeader.spacing
 
     RowLayout {
         id: rowHeader
-        width: implicitWidth
-        height: implicitHeight
         anchors.verticalCenter: parent.verticalCenter
         spacing: 150
         anchors.horizontalCenter: parent.horizontalCenter
@@ -25,103 +21,129 @@ Rectangle {
             fillMode: Image.PreserveAspectFit
         }
 
-        Row {
+        Rectangle {
             id: btnsSwitch
-            width: 200
-            height: 400
-            spacing: 15
-            Image {
-                id: buttonprev
-                x: 0
-                y: 0
-                source: "images/button-prev.svg"
-                fillMode: Image.PreserveAspectFit
+
+            color: "transparent"
+            Layout.preferredWidth: btnsSwitchRow.width
+            Layout.preferredHeight: btnsSwitchRow.height
+            Row {
+                id: btnsSwitchRow
+                spacing: 15
+                Image {
+                    id: buttonprev
+                    source: "images/button-prev.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
+
+                Image {
+                    id: buttonnext
+                    source: "images/button-next.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
+            }
+            DropShadow {
+                id: shadowBtnsSwitch
+                source: btnsSwitchRow
+                anchors.fill: source
+                horizontalOffset: 3
+                verticalOffset: 3
+                radius: 3
+                color: Qt.rgba(0,0,0, 0.6)
             }
 
-            Image {
-                id: buttonnext
-                x: 0
-                y: 0
-                source: "images/button-next.svg"
-                fillMode: Image.PreserveAspectFit
-            }
         }
 
-        Row {
+
+
+        Rectangle {
             id: btnsScreens
-            width: 200
-            height: 400
-            spacing: 10
-            Image {
-                id: button2active
-                x: 0
-                y: 0
-                source: "images/button-2-active.svg"
-                fillMode: Image.PreserveAspectFit
+            Layout.preferredWidth: btnsScreensRow.width
+            Layout.preferredHeight: btnsScreensRow.height
+            color: "transparent"
+            Row {
+                id: btnsScreensRow
+                spacing: 10
+                Image {
+                    id: button2active
+                    source: "images/button-2-active.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
+
+                Image {
+                    id: button4
+                    source: "images/button-4.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
+
+                Image {
+                    id: button8
+                    source: "images/button-8.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
+
+                Image {
+                    id: button16
+                    source: "images/button-16.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
+
+                Image {
+                    id: button32
+                    source: "images/button-32.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
+                Component.onCompleted: {
+                    console.log(width)
+                }
             }
 
-            Image {
-                id: button4
-                x: 0
-                y: 0
-                source: "images/button-4.svg"
-                fillMode: Image.PreserveAspectFit
-            }
-
-            Image {
-                id: button8
-                x: 0
-                y: 0
-                source: "images/button-8.svg"
-                fillMode: Image.PreserveAspectFit
-            }
-
-            Image {
-                id: button16
-                x: 0
-                y: 0
-                source: "images/button-16.svg"
-                fillMode: Image.PreserveAspectFit
-            }
-
-            Image {
-                id: button32
-                x: 0
-                y: 0
-                source: "images/button-32.svg"
-                fillMode: Image.PreserveAspectFit
+            DropShadow {
+                id: shadowBtnsScreen
+                source: btnsScreensRow
+                anchors.fill: source
+                horizontalOffset: 3
+                verticalOffset: 3
+                radius: 3
+                color: Qt.rgba(0,0,0, 0.6)
             }
         }
 
-        Row {
+        Rectangle {
             id: btnsMain
-            width: 200
-            height: 400
-            spacing: 15
-            Image {
-                id: patientmanager
-                x: 0
-                y: 0
-                source: "images/patient-manager.svg"
-                fillMode: Image.PreserveAspectFit
+            Layout.preferredWidth: btnsMainRow.width
+            Layout.preferredHeight: btnsMainRow.height
+            color: "transparent"
+            Row {
+                id: btnsMainRow
+                spacing: 15
+                Image {
+                    id: patientmanager
+                    source: "images/patient-manager.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
+
+                Image {
+                    id: mainmenu
+                    source: "images/main-menu.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
+
+                Image {
+                    id: settings
+                    source: "images/settings.svg"
+                    fillMode: Image.PreserveAspectFit
+                }
             }
 
-            Image {
-                id: mainmenu
-                x: 0
-                y: 0
-                source: "images/main-menu.svg"
-                fillMode: Image.PreserveAspectFit
-            }
-
-            Image {
-                id: settings
-                x: 0
-                y: 0
-                width: implicitWidth
-                height: implicitHeight
-                source: "images/settings.svg"
-                fillMode: Image.PreserveAspectFit
+            DropShadow {
+                id: shadowBtnsMain
+                source: btnsMainRow
+                anchors.fill: source
+                horizontalOffset: 3
+                verticalOffset: 3
+                radius: 3
+                color: Qt.rgba(0,0,0, 0.6)
             }
         }
         Text {
@@ -132,10 +154,11 @@ Rectangle {
             color: Qt.rgba(1, 1, 1, 0.65)
         }
     }
+
 }
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.66}
+    D{i:0;formeditorZoom:1.25}
 }
 ##^##*/
