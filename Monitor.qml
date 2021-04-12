@@ -72,7 +72,7 @@ Item{
                     anchors.fill: parametres
 
                     columnSpacing: -1
-                    rowSpacing: 0
+                    rowSpacing: -1
                     rows: 3
                     columns: 3
 
@@ -133,11 +133,11 @@ Item{
                         Text {
                             id: pvcValue
                             text: qsTr("3")
-                            anchors.left: parent.left
+                            anchors.left: pvc.right
                             anchors.top: parent.top
                             font.pointSize: fontSize
                             anchors.topMargin: 28
-                            anchors.leftMargin: 44
+                            anchors.leftMargin: 0
                         }
                     }
 
@@ -167,13 +167,14 @@ Item{
                             text: qsTr("50/150")
                             anchors.left: parent.left
                             anchors.top: parent.top
-                            anchors.leftMargin: 90
+                            anchors.leftMargin: 8
                             font.pointSize: fontSize
-                            anchors.topMargin: 8
+                            anchors.topMargin: 28
                         }
 
                         Text {
                             id: prValue
+                            x: 266
                             color: "#07f702"
                             text: qsTr("80")
                             anchors.right: parent.right
@@ -181,28 +182,30 @@ Item{
                             anchors.rightMargin: 8
                             font.weight: Font.Bold
                             font.pointSize: fontSize * 4
-                            anchors.topMargin: 33
+                            anchors.topMargin: 8
                         }
 
                         Text {
                             id: spo2
+                            y: 190
                             color: "#05e6fd"
                             text: qsTr("SpO2 %")
                             anchors.left: parent.left
-                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: 31
                             font.pointSize: fontSize
-                            anchors.topMargin: 103
                             anchors.leftMargin: 8
                         }
 
                         Text {
                             id: spo2range
+                            y: 214
                             color: "#05d2e7"
                             text: qsTr("90/100")
                             anchors.left: parent.left
-                            anchors.top: parent.top
-                            anchors.topMargin: 103
-                            anchors.leftMargin: 90
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: 7
+                            anchors.leftMargin: 8
                             font.pointSize: fontSize
                         }
 
@@ -243,13 +246,14 @@ Item{
 
                         Text {
                             id: t2
+                            y: 82
                             color: "#07f702"
                             text: qsTr("T2")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
-                            anchors.bottomMargin: 34
+                            anchors.bottomMargin: 19
                             font.pointSize: fontSize
-                            anchors.leftMargin: 8
+                            anchors.leftMargin: 7
                         }
 
 
@@ -260,7 +264,7 @@ Item{
                             anchors.left: parent.left
                             anchors.top: parent.top
                             anchors.leftMargin: 8
-                            anchors.topMargin: 27
+                            anchors.topMargin: 25
                             font.pointSize: fontSize * 3/4
                         }
 
@@ -278,11 +282,12 @@ Item{
 
                         Text {
                             id: t2Range
+                            y: 99
                             color: "#0a7908"
                             text: qsTr("30.0/42.0")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
-                            anchors.bottomMargin: 14
+                            anchors.bottomMargin: 8
                             anchors.leftMargin: 8
                             font.pointSize: fontSize * 3/4
                         }
@@ -328,20 +333,22 @@ Item{
                             text: qsTr("80/200")
                             anchors.right: parent.right
                             anchors.top: parent.top
+                            font.pointSize: fontSize
                             anchors.rightMargin: 8
                             anchors.topMargin: 8
-                            font.pointSize: fontSize * 3/4
 
                         }
 
                         Text {
                             id: ibp1Value
+                            x: 112
+                            y: 59
                             color: "#ff0000"
                             text: qsTr("120/80")
                             anchors.right: parent.right
-                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: 22
                             anchors.rightMargin: 8
-                            anchors.topMargin: 27
                             font.weight: Font.Bold
                             font.pointSize: fontSize * 2
                         }
@@ -352,9 +359,9 @@ Item{
                             text: qsTr("(93)")
                             anchors.right: parent.right
                             anchors.bottom: parent.bottom
+                            font.pointSize: fontSize
                             anchors.rightMargin: 8
                             anchors.bottomMargin: 8
-                            font.pointSize: fontSize * 3/4
                         }
                     }
 
@@ -384,31 +391,32 @@ Item{
                             text: qsTr("80/200")
                             anchors.right: parent.right
                             anchors.top: parent.top
+                            font.pointSize: fontSize
                             anchors.rightMargin: 8
                             anchors.topMargin: 8
-                            font.pointSize: fontSize * 3/4
                         }
 
                         Text {
                             id: neo
-                            y: 50
+                            y: 84
                             color: "#000000"
                             text: qsTr("NEO")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             anchors.leftMargin: 8
-                            anchors.bottomMargin: 51
-                            font.pointSize: fontSize
+                            anchors.bottomMargin: 22
+                            font.pointSize: fontSize * 3/4
                         }
 
                         Text {
                             id: nibpValue
+                            x: 264
                             color: "#fd0303"
                             text: qsTr("---/---")
                             anchors.right: parent.right
-                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: 22
                             anchors.rightMargin: 8
-                            anchors.topMargin: 27
                             font.pointSize: fontSize * 2
                         }
 
@@ -425,55 +433,60 @@ Item{
 
                         Text {
                             id: neoTime
+                            y: 98
                             color: "#000000"
                             text: qsTr("00:00")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             anchors.leftMargin: 8
-                            anchors.bottomMargin: 36
-                            font.pointSize: fontSize
+                            anchors.bottomMargin: 8
+                            font.pointSize: fontSize * 3/4
                         }
 
                         Image {
                             id: repeat1
+                            y: 85
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             source: "images/repeat 1.svg"
-                            anchors.leftMargin: 8
-                            anchors.bottomMargin: 22
+                            anchors.leftMargin: 45
+                            anchors.bottomMargin: 21
                             fillMode: Image.PreserveAspectFit
 
                         }
 
                         Text {
                             id: off
+                            y: 85
                             text: qsTr("OFF")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
-                            anchors.bottomMargin: 22
-                            anchors.leftMargin: 26
-                            font.pointSize: fontSize
+                            anchors.bottomMargin: 21
+                            anchors.leftMargin: 62
+                            font.pointSize: fontSize * 3/4
                         }
 
                         Image {
                             id: clock1
+                            y: 101
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
                             source: "images/clock 1.svg"
-                            anchors.bottomMargin: 8
-                            anchors.leftMargin: 8
+                            anchors.bottomMargin: 7
+                            anchors.leftMargin: 46
                             fillMode: Image.PreserveAspectFit
                         }
 
                         Text {
                             id: neo2
+                            y: 99
                             color: "#000000"
                             text: qsTr("00:00")
                             anchors.left: parent.left
                             anchors.bottom: parent.bottom
-                            anchors.bottomMargin: 8
-                            anchors.leftMargin: 26
-                            font.pointSize: fontSize
+                            anchors.bottomMargin: 7
+                            anchors.leftMargin: 62
+                            font.pointSize: fontSize * 3/4
                         }
 
 
@@ -493,21 +506,24 @@ Item{
                             id: etco2
                             color: "#b900d8"
                             text: qsTr("EtCO2")
+                            anchors.verticalCenter: parent.verticalCenter
                             anchors.left: parent.left
-                            anchors.top: parent.top
+                            anchors.verticalCenterOffset: -16
                             anchors.leftMargin: 8
-                            anchors.topMargin: 8
                             font.pointSize: fontSize
                         }
 
                         Text {
                             id: fico2
+                            y: 19
+                            width: 42
+                            height: 18
                             color: "#07f702"
                             text: qsTr("FiCO2")
-                            anchors.left: parent.left
-                            anchors.bottom: parent.bottom
-                            anchors.leftMargin: 10
-                            anchors.bottomMargin: 37
+                            anchors.verticalCenter: parent.verticalCenter
+                            anchors.verticalCenterOffset: -16
+                            anchors.horizontalCenterOffset: 12
+                            anchors.horizontalCenter: parent.horizontalCenter
                             font.pointSize: fontSize
                         }
 
@@ -515,46 +531,51 @@ Item{
                             id: etco2Value
                             color: "#b900d8"
                             text: qsTr("32")
-                            anchors.right: parent.right
-                            anchors.top: parent.top
-                            anchors.rightMargin: 8
-                            anchors.topMargin: 8
+                            anchors.verticalCenter: parent.verticalCenter
+                            anchors.left: parent.left
+                            anchors.leftMargin: 10
+                            anchors.verticalCenterOffset: 12
                             font.weight: Font.Bold
                             font.pointSize: fontSize * 2
                         }
 
                         Text {
                             id: awprValue
+                            x: 310
+                            y: 52
                             color: "#000000"
                             text: qsTr("32")
+                            anchors.verticalCenter: parent.verticalCenter
                             anchors.right: parent.right
-                            anchors.bottom: parent.bottom
-                            anchors.rightMargin: 8
-                            anchors.bottomMargin: 8
+                            anchors.verticalCenterOffset: 12
+                            anchors.rightMargin: 7
                             font.weight: Font.Bold
                             font.pointSize: fontSize * 2
                         }
 
                         Text {
                             id: fico2Value
+                            y: 42
                             color: "#07f702"
                             text: qsTr("32")
-                            anchors.left: parent.left
-                            anchors.bottom: parent.bottom
-                            anchors.leftMargin: 83
-                            anchors.bottomMargin: 8
+                            anchors.verticalCenter: parent.verticalCenter
+                            anchors.verticalCenterOffset: 12
+                            anchors.horizontalCenterOffset: 8
+                            anchors.horizontalCenter: parent.horizontalCenter
                             font.weight: Font.Bold
                             font.pointSize: fontSize * 2
                         }
 
                         Text {
                             id: awpr
+                            x: 308
+                            y: 35
                             color: "#000000"
                             text: qsTr("AWPR")
+                            anchors.verticalCenter: parent.verticalCenter
                             anchors.right: parent.right
-                            anchors.bottom: parent.bottom
-                            anchors.bottomMargin: 37
-                            anchors.rightMargin: 66
+                            anchors.verticalCenterOffset: -16
+                            anchors.rightMargin: 5
                             font.pointSize: fontSize
                         }
                     }
@@ -592,12 +613,14 @@ Item{
 
                         Text {
                             id: ibp2Value
+                            x: 112
+                            y: 59
                             color: "#ff0000"
                             text: qsTr("120/80")
                             anchors.right: parent.right
-                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: 22
                             anchors.rightMargin: 8
-                            anchors.topMargin: 27
                             font.pointSize: fontSize * 2
                             font.weight: Font.Bold
                         }
@@ -618,8 +641,10 @@ Item{
         }
     }
 }
+
+
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:1.75}D{i:18}
+    D{i:0;formeditorZoom:4}D{i:46}
 }
 ##^##*/
